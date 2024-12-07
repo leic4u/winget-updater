@@ -25,7 +25,7 @@ jobs:
             url: "https://github.com/michidk/vscli/releases/download/v{VERSION}/vscli-x86_64-pc-windows-msvc.zip"
           - id: "glzr-io.glazewm"
             repo: "glzr-io/glazewm"
-            url: "https://github.com/glzr-io/glazewm/releases/download/v{VERSION}/glazewm-{VERSION}.exe"
+            url: "https://github.com/glzr-io/glazewm/releases/download/v{VERSION}/glazewm-v{VERSION}.exe"
           - id: "glzr-io.zebar"
             repo: "glzr-io/zebar"
             url: "https://github.com/glzr-io/zebar/releases/download/v{VERSION}/zebar-v{VERSION}-opt1-x64.msi"
