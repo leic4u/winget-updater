@@ -14,21 +14,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - id: "Typst.Typst"
-            repo: "typst/typst"
-            url: "https://github.com/typst/typst/releases/download/v{VERSION}/typst-x86_64-pc-windows-msvc.zip"
-          - id: "Casey.Just"
-            repo: "casey/just"
-            url: "https://github.com/casey/just/releases/download/{VERSION}/just-{VERSION}-x86_64-pc-windows-msvc.zip"
-          - id: "michidk.vscli"
-            repo: "michidk/vscli"
-            url: "https://github.com/michidk/vscli/releases/download/v{VERSION}/vscli-x86_64-pc-windows-msvc.zip"
-          - id: "glzr-io.glazewm"
-            repo: "glzr-io/glazewm"
-            url: "https://github.com/glzr-io/glazewm/releases/download/v{VERSION}/glazewm-v{VERSION}.exe"
-          - id: "glzr-io.zebar"
-            repo: "glzr-io/zebar"
-            url: "https://github.com/glzr-io/zebar/releases/download/v{VERSION}/zebar-v{VERSION}-opt1-x64.msi"
+          - id: "xanderfrangos.twinkletray"
+            repo: "xanderfrangos/twinkle-tray"
+            url: "https://github.com/xanderfrangos/twinkle-tray/releases/download/v{VERSION}/Twinkle.Tray.v{VERSION}.exe"
           
     steps:
     - name: Update Packages
@@ -51,3 +39,4 @@ jobs:
       with:
         komac-version: "2.6.0"
         args: 'cleanup --only-merged --token=${{ secrets.KOMAC_TOKEN }}'
+
