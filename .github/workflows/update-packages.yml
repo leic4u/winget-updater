@@ -3,7 +3,7 @@ name: Update WinGet Packages
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 3 * * *' # Scheduled to run daily at 03:00
+    - cron:  '3,13,23,33,43,53 * * * *'
 
 jobs:
   update:
@@ -17,6 +17,9 @@ jobs:
           - id: "xanderfrangos.twinkletray"
             repo: "xanderfrangos/twinkle-tray"
             url: "https://github.com/xanderfrangos/twinkle-tray/releases/download/v{VERSION}/Twinkle.Tray.v{VERSION}.exe"
+          - id: "chen08209.FlClash"
+            repo: "chen08209/FlClash"
+            url: "https://github.com/chen08209/FlClash/releases/download/v{VERSION}/FlClash-{VERSION}-windows-amd64-setup.exe"
           
     steps:
     - name: Update Packages
@@ -39,4 +42,5 @@ jobs:
       with:
         komac-version: "2.6.0"
         args: 'cleanup --only-merged --token=${{ secrets.KOMAC_TOKEN }}'
+
 
