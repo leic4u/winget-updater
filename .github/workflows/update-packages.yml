@@ -23,7 +23,9 @@ jobs:
           - id: "ClashVergeRev.ClashVergeRev"
             repo: "clash-verge-rev/clash-verge-rev"
             url: "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v{VERSION}/Clash.Verge_{VERSION}_x64-setup.exe"
-          
+          - id: "amir1376.ABDownloadManager"
+            repo: "amir1376/ab-download-manager"
+            url: "https://github.com/amir1376/ab-download-manager/releases/download/v{VERSION}/ABDownloadManager_{VERSION}_windows_x64.exe"
     steps:
     - name: Update Packages
       uses: michidk/winget-updater@latest
@@ -45,6 +47,7 @@ jobs:
       with:
         komac-version: "2.6.0"
         args: 'cleanup --only-merged --token=${{ secrets.KOMAC_TOKEN }}'
+
 
 
 
