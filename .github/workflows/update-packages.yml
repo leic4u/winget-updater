@@ -20,6 +20,9 @@ jobs:
           - id: "chen08209.FlClash"
             repo: "chen08209/FlClash"
             url: "https://github.com/chen08209/FlClash/releases/download/v{VERSION}/FlClash-{VERSION}-windows-amd64-setup.exe"
+          - id: "ClashVergeRev.ClashVergeRev"
+            repo: "clash-verge-rev/clash-verge-rev"
+            url: "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v{VERSION}/Clash.Verge_{VERSION}_x64-setup.exe"
           
     steps:
     - name: Update Packages
@@ -42,5 +45,6 @@ jobs:
       with:
         komac-version: "2.6.0"
         args: 'cleanup --only-merged --token=${{ secrets.KOMAC_TOKEN }}'
+
 
 
