@@ -1,5 +1,8 @@
 name: Update WinGet Packages
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   schedule:
@@ -50,6 +53,7 @@ jobs:
       with:
         komac-version: "2.6.0"
         args: 'cleanup --only-merged --token=${{ secrets.KOMAC_TOKEN }}'
+
 
 
 
