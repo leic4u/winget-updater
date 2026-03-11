@@ -28,7 +28,7 @@ jobs:
             url: "https://github.com/amir1376/ab-download-manager/releases/download/v{VERSION}/ABDownloadManager_{VERSION}_windows_x64.exe"
           - id: "Diorser.LiteMonitor"
             repo: "Diorser/LiteMonitor"
-            url: "https://github.com/Diorser/LiteMonitor/releases/download/v1.3.4/LiteMonitor_v{VERSION}-win-x64.zip"
+            url: "https://github.com/Diorser/LiteMonitor/releases/download/v{VERSION}/LiteMonitor_v{VERSION}-win-x64.zip"
     steps:
     - name: Update Packages
       uses: michidk/winget-updater@latest
@@ -50,6 +50,7 @@ jobs:
       with:
         komac-version: "2.6.0"
         args: 'cleanup --only-merged --token=${{ secrets.KOMAC_TOKEN }}'
+
 
 
 
